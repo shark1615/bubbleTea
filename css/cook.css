@@ -1,0 +1,162 @@
+@font-face
+{
+	font-family: "chalk";
+	src: url(HanyiSentyChalk.ttf);
+}
+
+body
+{
+    background-image: url('../resource/cookBackground.jpg');
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: "chalk";
+    font-size: 24px;
+}
+
+
+
+
+.btn
+{
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 20px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	font-family: chalk;
+	
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+	border-radius: 20px;
+	position: absolute;
+	width: 13%;
+}
+
+.btn:hover 
+{
+	background-color: #555555;
+	color: white;
+	
+}
+
+div
+{
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 15%;
+}
+
+.pearl
+{
+	position: absolute;
+	top:10%;
+	left:15%;
+}
+
+.tea
+{
+	position: absolute;
+	top:55%;
+	left:15%;
+}
+.milk
+{
+    position: absolute;
+	top:10%;
+	left:38%;
+}
+.powder
+{
+	position: absolute;
+	top:55%;
+	left:38%;
+}
+
+.sugar
+{
+	position: absolute;
+	top:10%;
+	left:61%;
+}
+.ice
+{
+    position: absolute;
+	top:55%;
+	left:61%;
+}
+
+#pearlInput
+{
+    position: absolute;
+    top:1%;
+    left:5px;    
+}
+
+#teaInput
+{
+    position: absolute;
+    top: 45%;
+    left: 5px;
+}
+
+#milkInput
+{
+    position: absolute;
+    top:1%;
+    left:335px;    
+}
+
+#powderInput
+{
+    position: absolute;
+    top: 45%;
+    left: 335px;
+}
+
+#sugarInput
+{
+    position: absolute;
+    top:5%;
+    left:665px;    
+}
+
+#iceInput
+{
+    position: absolute;
+    top: 49%;
+    left: 665px;
+}
+
+
+.submit
+{
+	width:10%;
+	position: absolute;
+	top:550px;
+	left:82%;
+	font-size:19px;
+	border: 2px solid #555555;
+	border-radius: 50%;
+}
+
+.shop
+{
+	width:10%;
+	position: absolute;
+	top:440px;
+	left:82%;
+	font-size:19px;
+	border: 2px solid #555555;
+	border-radius: 50%;
+}
+
+
