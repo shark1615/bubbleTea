@@ -59,81 +59,81 @@ div
 {
 	position: absolute;
 	top:10%;
-	left:15%;
+	left:6%;
 }
 
 .tea
 {
 	position: absolute;
 	top:55%;
-	left:15%;
+	left:6%;
 }
 .milk
 {
     position: absolute;
 	top:10%;
-	left:38%;
+	left:26%;
 }
 .powder
 {
 	position: absolute;
 	top:55%;
-	left:38%;
+	left:26%;
 }
 
 .sugar
 {
 	position: absolute;
 	top:10%;
-	left:61%;
+	left:47%;
 }
 .ice
 {
     position: absolute;
 	top:55%;
-	left:61%;
+	left:47%;
 }
 
 #pearlInput
 {
     position: absolute;
     top:1%;
-    left:5px;    
+    left:-130px;    
 }
 
 #teaInput
 {
     position: absolute;
     top: 45%;
-    left: 5px;
+    left: -130px;
 }
 
 #milkInput
 {
     position: absolute;
     top:1%;
-    left:335px;    
+    left:180px;    
 }
 
 #powderInput
 {
     position: absolute;
     top: 45%;
-    left: 335px;
+    left:180px;
 }
 
 #sugarInput
 {
     position: absolute;
     top:5%;
-    left:665px;    
+    left:490px;    
 }
 
 #iceInput
 {
     position: absolute;
     top: 49%;
-    left: 665px;
+    left: 490px;
 }
 
 
@@ -141,22 +141,55 @@ div
 {
 	width:10%;
 	position: absolute;
-	top:550px;
+	top:600px;
 	left:82%;
 	font-size:19px;
-	border: 2px solid #555555;
+	border: 2px solid white;
 	border-radius: 50%;
+	background-color: #555555;
+	color: white;
+}
+
+.submit:hover
+{
+	background-color: white;
+	color: black;
 }
 
 .shop
 {
 	width:10%;
 	position: absolute;
-	top:440px;
-	left:82%;
+	top:600px;
+	left:70%;
 	font-size:19px;
-	border: 2px solid #555555;
+	border: 2px solid white;
 	border-radius: 50%;
+	background-color: #555555;
+	color: white;
 }
 
+.shop:hover
+{
+	background-color: white;
+	color: black;
+}
+
+
+table
+{
+	position:absolute;
+	width:25%;
+	height:65%;
+	font-family: chalk;
+	font-size: 30px;
+	text-align:center;
+	font-weight: bold;
+	top:75px;
+	right: 110px;
+}
+tr:hover
+{
+	background-color: #ADD8E6;
+}
 

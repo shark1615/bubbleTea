@@ -1,3 +1,8 @@
+function start()
+{
+	loadBag();
+}
+
 function check()
 {
 	var pearl = document.getElementById("pearlOption").value;
@@ -155,6 +160,38 @@ function check()
 	return lock;
 }
 
+function loadBag()
+{
+	console.log("123");
+	var length = localStorage.length;
+	material = [];
+	var j=0;
+	//把不是found的item加進material陣列裡面
+	for (var i = 0; i < length; ++i) 
+	{
+		if(localStorage.key(i)!="found")
+		{
+			material[j] = localStorage.key(i);
+			j++;
+		}
+	}
+	
+	var markup="";
+	for(tag in material)
+	{
+		if(material[tag]=="ice")
+			markup += "<tr><td>冰塊</th><td>"+localStorage.getItem(material[tag])+"g</td></tr>";
+		else if(material[tag]=="sugar")
+			markup += "<tr><td>糖</td><td>"+localStorage.getItem(material[tag])+"g</td></tr>";
+		else
+			markup += "<tr><td>"+material[tag]+"</td><td>"+localStorage.getItem(material[tag])+"g</td></tr>";
+	}
+	
+	document.getElementById("bag").innerHTML = markup;
+}
+
+
+
 var material={};
 function setUp(key,value)
 {
@@ -301,30 +338,27 @@ function judge()
 		if(items[i].split(":")[1]=="0")
 			commentSet(0);
 	}
-
+	
+	//var commentResult = document.getElementById("commentResult");
+	//commentResult.innerHTML += message1;
 	console.log(message1);
 	console.log(message2);
 	console.log(message3);
 	console.log(message4);
 	console.log(message5);
-
-	localStorage.setItem("message1",message1);
-	localStorage.setItem("message2",message2);
-	localStorage.setItem("message3",message3);
-	localStorage.setItem("message4",message4);
-	localStorage.setItem("message5",message5);
-
-	
-	
+	/*var result = {
+			j1:message1,
+			j2:message2,
+			j3:message3,
+			j4:message4,
+			j5:message5
+		}
+	var results = JSON.stringify(result);
+	var blob = new Blob([results], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "result.json");*/
 	var gameOver=false;
-	localStorage.setItem("gameOver","false");
 	if(win>=3)
-	{	
 		gameOver=true;
-		localStorage.setItem("gameOver","true");
-
-	}
-		
 	
 	items=[];
 }
@@ -409,7 +443,7 @@ function commentSet(comment)
 		message5 = comment[random_com];
 		
 		var messages=[message1,message2,message3,message4,message5];
-		return messages; 
+		return messages;
 	}
 
 	//覺得很好喝的那位
@@ -418,6 +452,7 @@ function commentSet(comment)
 		comment=["有點好喝喔","比例很讚","去開店賺錢吧","出師了","你的前途一片光明","666","鬼之珍奶","respect you!","珍奶大師就是你","這杯珍奶很可以","最新肥宅快樂水","好好喝","還想再喝一杯","我願意為這杯珍奶變胖"];
 		var random_com = Math.floor( Math.random() * comment.length );
 		message = comment[random_com];
+
 		return message;
 	}
 }
@@ -426,5 +461,7 @@ function change()
 {
 	var lock=check();
 	if(lock==1)
-		window.location.href='shake.html';
+		window.location.replace('shake.html');
 }
+
+window.addEventListener( "load",start, false );

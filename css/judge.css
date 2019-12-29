@@ -193,13 +193,49 @@ span#msg5
     animation-iteration-count: 1;
 }
 
+#loseAnimate1
+{
+    z-index: 3;
+    position: absolute;
+    animation-name:loseAnimation1;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    width: 30%;
+    left:30%;
+    top:50%;
+}
+
+#loseAnimate2
+{
+    z-index: 3;
+    position: absolute;
+    left:60%;
+    top:50%;
+    width: 15%;
+    animation-name:loseAnimation2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+#returnAnimate
+{
+    z-index: 3;
+    position: absolute;
+    left:40%;
+    top:45%;
+    width: 20%;
+    animation-name: returnAnimation;
+    animation-duration:3s;
+    animation-iteration-count:1;
+}
+
 p
 {
     z-index: 4;
-    position: absolute;
-    left:35%;
+    position: relative;
     font-size: 60px;
+    text-align: center;
 }
+
 #restartButton
 {
     z-index:4;
@@ -226,3 +262,23 @@ p
     to{left:32%;top:50%;-webkit-transform:scale(1);}
 }
 
+@keyframes loseAnimation1
+{
+    from {left:-800px;top:50%;-webkit-transform:scale(1);}
+   
+    to{left:30%;top:50%;-webkit-transform:scale(1);}
+}
+
+@keyframes loseAnimation2
+{
+    from {left:-300px;top:50%;-webkit-transform:scale(1);}
+   
+    to{left:60%;top:50%;-webkit-transform:scale(1);}
+}
+
+@keyframes returnAnimation
+{
+    from {left:40%;top:45%;-webkit-transform:scale(0.5);}
+   
+    to{left:40%;top:45%;-webkit-transform:scale(1.2);}
+}

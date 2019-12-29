@@ -7,7 +7,6 @@
         <link rel = "stylesheet" type = "text/css" href = "css/cook.css">
 		
 		<script src = "js/judge.js"></script>
-		<script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js"></script>
 		<script src = "js/jquery-3.4.1.js"></script>
     </head>
     <body>
@@ -19,6 +18,18 @@
 		<button id="sugar" type="button" class="btn sugar">糖類</button>
 		<button id="ice" type="button" class="btn ice">冰塊</button>
         
+		
+		<table border = "1">
+			<thead>
+				<tr>
+					<th colspan="2">背包內材料</th>
+				</tr>
+			</thead>
+			
+			<tbody id="bag">
+			</tbody>
+		</table>
+		
 		<form>
         <div id = "pearlInput">
             <select id = "pearlOption" name = "珍珠" >
@@ -75,7 +86,7 @@
             
         </div>
         </form>
-        <button id="submit" type="button" class="btn submit" onclick="change()"; >確認調配</button>
+        <button id="submit" type="button" class="btn submit" onclick="change()" >確認調配</button>
 		<button id="submit" type="button" class="btn shop" onclick="location.replace('shop.html')">返回購物</button>
 
     </body>
