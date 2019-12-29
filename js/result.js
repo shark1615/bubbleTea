@@ -105,7 +105,7 @@ function restart()
     var gameResult = localStorage.getItem("gameOver");
     var remainFound = localStorage.getItem("found");
     if(gameResult == "false" && remainFound>=18)
-        window.location.replace ("cook.html");
+        window.location.replace ("game.html");
     else if(gameResult == "false" && remainFound<18)
         window.location.replace("home.html");
     else //true
